@@ -21217,7 +21217,7 @@ module.exports = require('./lib/React');
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -21232,10 +21232,14 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Button(props) {
-  var cssclasses = classNames('Button', props.className);
-  return props.href ? _react2.default.createElement('a', _extends({}, props, { className: cssclasses })) : _react2.default.createElement('button', _extends({}, props, { className: cssclasses }));
-}
+var Button = function Button(props) {
+    var cssclasses = (0, _classnames2.default)('Button', props.className);
+    return props.href ? _react2.default.createElement('a', _extends({}, props, { className: cssclasses })) : _react2.default.createElement('button', _extends({}, props, { className: cssclasses }));
+};
+
+Button.propTypes = {
+    href: _react.PropTypes.string
+};
 
 exports.default = Button;
 },{"classnames":2,"react":184}],186:[function(require,module,exports){
@@ -21317,6 +21321,43 @@ _reactDom2.default.render(_react2.default.createElement(
         'div',
         { style: { display: 'inline-block', background: 'purple' } },
         _react2.default.createElement(_Logo2.default, null)
+    ),
+    _react2.default.createElement(
+        'h2',
+        null,
+        'Button'
+    ),
+    _react2.default.createElement(
+        'div',
+        null,
+        'onClick\u304C\u6307\u5B9A\u3055\u308C\u305FButton: ',
+        _react2.default.createElement(
+            _Button2.default,
+            { onClick: function onClick() {
+                    return alert('クリックされました');
+                } },
+            '\u30AF\u30EA\u30C3\u30AF'
+        )
+    ),
+    _react2.default.createElement(
+        'div',
+        null,
+        'href\u304C\u6307\u5B9A\u3055\u308C\u305FButton: ',
+        _react2.default.createElement(
+            _Button2.default,
+            { href: 'http://reactjs.com' },
+            '\u30D5\u30A9\u30ED\u30FC\u3059\u308B'
+        )
+    ),
+    _react2.default.createElement(
+        'div',
+        null,
+        '\u30AF\u30E9\u30B9\u540D\u304C\u6307\u5B9A\u3055\u308C\u305FButton: ',
+        _react2.default.createElement(
+            _Button2.default,
+            { className: 'custon' },
+            '\u4F55\u3082\u3057\u307E\u305B\u3093'
+        )
     )
 ), document.getElementById('pad'));
 },{"./components/Button":185,"./components/Logo":186,"react":184,"react-dom":32}]},{},[187]);

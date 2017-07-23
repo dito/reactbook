@@ -13,10 +13,10 @@ ReactDOM.render(
             <Logo />
         </div>
         {/* その他のコンポーネントはここに追加されます ... */}
-        {/*<h2>Button</h2>
+        <h2>Button</h2>
         <div>onClickが指定されたButton: <Button onClick={()=> alert('クリックされました')}>クリック</Button></div>
         <div>hrefが指定されたButton: <Button href="http://reactjs.com">フォローする</Button></div>
-        <div>クラス名が指定されたButton: <Button className="custon">何もしません</Button></div>*/}
+        <div>クラス名が指定されたButton: <Button className="custon">何もしません</Button></div>
     </div>,
     document.getElementById('pad')
 );
